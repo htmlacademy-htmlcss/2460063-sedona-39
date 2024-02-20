@@ -4,18 +4,19 @@
   <head>
     <meta charset="utf-8">
     <title>Седона</title>
+    <link href="styles/style.css" rel="stylesheet">
   </head>
 
   <body>
-    <header>
+    <header class="catalog-header">
       <nav class="navigation">
-        <img src="images/logo-sedona.svg" width="140" height="70" alt="Логотип сайта" />
+        <img src="images/svg/logo-sedona.svg" width="140" height="70" alt="Логотип сайта" />
         <ul class="navigation-list">
           <li class="navigation-item">
             <a class="navigation-link" href="index.html">Главная</a>
           </li>
           <li>
-            <a class="navigation-link" href="#">О седоне</a>
+            <a class="navigation-link" href="#">О Седоне</a>
           </li>
           <li>
             <a class="navigation-link" href="catalog.html">Гостиницы</a>
@@ -32,12 +33,13 @@
             </a>
           </li>
           <li>
-            <a class="navigation-link-user" href="#"><span class="visually-hidden">Хочу сюда</span></a>
+            <a class="navigation-link-user-button" href="#"><span class="visually-hidden">Хочу сюда</span></a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="main-inner">
+      <div class="hotel-filter">
       <header class="inner-header">
         <h1 class="inner-header-title">Гостиницы Седоны</h1>
         <ul class="breadcrumbs">
@@ -46,7 +48,7 @@
             </a>
           </li>
           <li class="breadcrumbs-item">
-            <a class="hotels">Гостиницы</a>
+            <a class="hotels" href="#">Гостиницы</a>
           </li>
         </ul>
       </header>
@@ -101,7 +103,7 @@
 
           </fieldset>
           <fieldset class="catalog-filter-price">
-            <legend>Стоимость,<span>₽:</span></legend>
+            <legend class="price-text">Стоимость,<span>₽:</span></legend>
             <label>от<input type="text" value="0"></label>
             <label>до<input type="text" value="9000"></label>
           </fieldset>
@@ -111,10 +113,10 @@
 
           <button class="button" type="submit">Применить</button>
           <button class="button" type="reset">Сбросить</button>
-
+        </div>
         </form>
         <div class="sorting">
-          <b>Найдено гостиниц: 38</b>
+          <p class="result">Найдено гостиниц: 38</p>
           <select class="select-control" aria-label="Сортировка">
             <option value="cheap">Сначала дешевые</option>
           </select>
@@ -131,7 +133,7 @@
         <ul class="product-list">
           <li class="product-list-item">
             <a class="product-list-link" href="#">
-              <img class="product-list-card" src="images/catalog/hotel-1.jpg" width="300" height="212" alt="Гостиница Amara Resort & Spa">
+              <img class="product-list-card" src="images/jpg/hotel-1.jpg" width="300" height="212" alt="Гостиница Amara Resort & Spa">
               <h3 class="product-list-card">Amara Resort & Spa</h3>
             </a>
             <span class="type-of-housing">Гостиница</span>
@@ -150,7 +152,7 @@
           </li>
           <li class="product-list-item">
             <a class="product-list-link" href="#">
-              <img class="product-list-card" src="images/catalog/hotel-2.jpg" width="300" height="212" alt="Гостиница Villas at Poco Diablo">
+              <img class="product-list-card" src="images/jpg/hotel-2.jpg" width="300" height="212" alt="Гостиница Villas at Poco Diablo">
               <h3 class="product-list-card">Villas at Poco Diablo</h3>
             </a>
             <span class="type-of-housing">Гостиница</span>
@@ -169,7 +171,7 @@
           </li>
           <li class="product-list-item">
             <a class="product-list-link" href="#">
-              <img class="product-list-card" src="images/catalog/hotel-3.jpg" width="300" height="212" alt="Гостиница Desert Quail Inn">
+              <img class="product-list-card" src="images/jpg/hotel-3.jpg" width="300" height="212" alt="Гостиница Desert Quail Inn">
               <h3 class="product-list-card">Desert Quail Inn</h3>
             </a>
             <span class="type-of-housing">Гостиница</span>
@@ -188,7 +190,7 @@
           </li>
           <li class="product-list-item">
             <a class="product-list-link" href="#">
-              <img class="product-list-card" src="images/catalog/hotel-4.jpg" width="300" height="212" alt="Гостиница GreenTree Inn">
+              <img class="product-list-card" src="images/jpg/hotel-4.jpg" width="300" height="212" alt="Гостиница GreenTree Inn">
               <h3 class="product-list-card">GreenTree Inn</h3>
             </a>
             <span class="type-of-housing">Гостиница</span>
@@ -228,17 +230,17 @@
         </ul>
       </section>
     </main>
-    <footer class="footer-main">
-      <section class="subscription">
+    <footer class="footer-catalog">
+      <section class="subscription-catalog">
         <h2 class="visually-hidden">Рассылка информации</h2>
-        <p>Подпишитесь на рассылку</p>
-        <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <p class="subscription-text-catalog-1">Подпишитесь на рассылку</p>
+        <p class="subscription-text-catalog-2">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
-          <p class="ubscription-form-e-mail">
-            <label for="subscription-e-mail"> Ваш e-mail</label>
-            <input type="email" name="e-mail" id="subscription-e-mail">
+          <p class="subcription-form-e-mail">
+            <label for="subscription-e-mail">
+            <input type="email" name="e-mail" id="subscription-e-mail" placeholder="Ваш e-mail"></label>
           </p>
-          <button class="button-search" type="submit">Подписаться</button>
+          <button class="button-subscribe" type="submit">Подписаться</button>
         </form>
       </section>
       <section class="footer-social">
@@ -267,7 +269,7 @@
       </section>
       <section class="logo-htmlacademy">
         <h2 class="visually-hidden">Логотип HTML-Academy</h2>
-        <a class="logo-htmlacademy-link" href=" https://htmlacademy.ru/">
+        <a class="logo-htmlacademy-link" href=" https://htmlacademy.ru/" target="_blank" rel="noreferrer noopener">
           <span class="visually-hidden">Логотип HTML-Academy</span>
         </a>
       </section>

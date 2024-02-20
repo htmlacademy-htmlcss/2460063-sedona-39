@@ -1,0 +1,371 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400") format("woff2");
+  font-display: swap;
+
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700") format("woff2");
+  font-display: swap;
+}
+/*Блок-body*/
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+  font-style: normal;
+  color:rgba(0, 0, 0, 1);
+  background-color: rgba(242, 242, 242, 1);
+}
+
+
+/* Блок-header "главная страница"*/
+.main-header{
+  background-color: rgba(255, 255, 255, 1);
+}
+.navigation-link{
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #000000;
+  text-decoration: none;
+}
+.navigation-link-user{
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #000000;
+  text-decoration: none;
+}
+.navigation-link-user-button{
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(117, 97, 87, 1);
+  text-decoration: none;
+}
+
+/*Блок-"Добро пожаловать в Седону"*/
+.main-index{
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.welcome-sedona{
+  background-image: url(../images/svg/vector.svg), url(../images/jpg/index-background.jpg);
+  background-size: 100% auto, cover;
+  background-repeat: no-repeat;
+  background-position: left bottom, left top;
+}
+
+.welcome-sedona-text{
+  text-align: center;
+}
+.welcome-sedona-text-1{
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+.welcome-sedona-text-2{
+  color:rgba(51, 51, 51, 1);
+}
+
+/*Блок-"Преимущества Седоны"*/
+.advantages-list{
+  text-align: center;
+}
+.advantages-title{
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+.advantages-text{
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.advantages-item:nth-child(odd){
+  background-color:rgba(130, 179, 211, 1);
+}
+
+.advantages-item:nth-child(2n){
+  background-color:rgba(131, 179, 211, 0.12);
+}
+
+.advantages-item-3{
+  background-color:rgba(131, 179, 211, 0.2);
+}
+
+/*Блок-"Рекоммендации"*/
+.recommendations-text{
+  text-align: center;
+}
+.recommendations-text-1{
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+}
+.recommendations-text-2{
+  color: rgba(51, 51, 51, 1);
+}
+.recommendations-list{
+  text-align: center;
+}
+
+.recommendations-title{
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: rgba(0, 0, 0, 1)
+}
+.recommendations-list p{
+  font-size: 18px;
+  line-height: 21px;
+  color: rgba(51, 51, 51, 1);
+}
+
+.recommendations-item:nth-child(odd){
+  background-color: rgba(131, 179, 211, 0.12);
+}
+/*Блок-"Поиск гостиницы"*/
+.hotel-search{
+  text-align: center;
+}
+.hotel-search-text-1{
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+}
+.hotel-search-text-2{
+  color: rgba(51, 51, 51, 1);
+}
+.button-search{
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  background-color: rgba(117, 97, 87, 1);
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/*Блок "Подписаться на рассылку"*/
+.subscription{
+  background-image: url(../images/jpg/background_subscription.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+}
+
+.subscription-text{
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.subcription-form-e-mail label{
+  color: rgba(0, 0, 0, 1);
+  font-size: 18px;
+  line-height: 24px;
+}
+.button-subscribe{
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+  background-color: rgba(130, 179, 211, 1);
+  border-color: rgba(130, 179, 211, 1);
+}
+
+/*Блок "footer -"главная страница""*/
+
+.footer-main{
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.telephone{
+  font-size: 40px;
+  line-height: 40px;
+  text-decoration: none;
+  color:rgba(0, 0, 0, 1);
+
+}
+
+/*КАТАЛОГ*/
+
+/*Блок-"header"*/
+.catalog-header{
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/*Блок-"Фильтр по гостиницам"*/
+.main-inner{
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.hotel-filter{
+  background-image: url(../images/png/background_filter.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.inner-header-title{
+  color: rgba(255, 255, 255, 1);
+  font-size: 60px;
+  line-height: 78px;
+  font-weight: 700;
+}
+.breadcrumbs-item a{
+  color: rgba(255, 255, 255, 1);
+  font-size: 16px;
+  line-height: 21px;
+  text-decoration: none;
+}
+.catalog-filter-title{
+  color: rgba(255, 255, 255, 1);
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+.infrastructure{
+  color: rgba(255, 255, 255, 1);
+  font-size: 18px;
+  line-height: 23px;
+}
+.housing{
+  color: rgba(255, 255, 255, 1);
+  font-size: 18px;
+  line-height: 23px;
+}
+.price-text{
+  color: rgba(255, 255, 255, 1);
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+.catalog-filter-price label{
+  font-size: 18px;
+  line-height: 24px;
+
+}
+
+.catalog-filter button{
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(130, 179, 211, 1);
+  border-color: rgba(130, 179, 211, 1);
+}
+.result{
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+}
+.select-control{
+  font-size: 18px;
+  line-height: 21px;
+  color:rgba(51, 51, 51, 1);
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/*Блок "Каталог продукции"*/
+.product-list-link {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 1);
+  text-decoration: none;
+  background-color:rgba(242, 242, 242, 1);
+}
+.type-of-housing{
+  font-size: 18px;
+  line-height: 21px;
+  color: rgba(51, 51, 51, 1);
+}
+.price{
+  font-size: 18px;
+  line-height: 21px;
+  color: rgba(51, 51, 51, 1);
+}
+.button-more-details{
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  color:rgba(255, 255, 255, 1);
+  background-color: rgba(117, 97, 87, 1);
+  text-decoration: none;
+}
+.button-favorites{
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  color:rgba(255, 255, 255, 1);
+  background-color:rgba(130, 179, 211, 1);
+  border-color: rgba(130, 179, 211, 1);
+}
+.button-favorites-current{
+  background-color:rgba(125, 181, 79, 1);
+  border-color: rgba(125, 181, 79, 1);
+}
+.raiting-text{
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(51, 51, 51, 1);
+}
+.pagination-link{
+  background-color: rgba(130, 179, 211, 1);
+  font-size: 20px;
+  line-height: 37px;
+  font-weight: 700;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+}
+.pagination-link-current{
+  background-color: rgba(242, 242, 242, 1);
+  color:rgba(0, 0, 0, 1);
+  text-decoration: none;
+}
+.subscription-catalog{
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+}
+.subscription-catalog{
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.subscription-text-catalog-1{
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  color:rgba(0, 0, 0, 1);
+  text-transform: uppercase;
+}
+.subscription-text-catalog-2{
+  color:rgba(51, 51, 51, 1);
+}
+
+/*Блок "footer- страница "Каталог""*/
+
+.footer-catalog{
+  background-color: rgba(255, 255, 255, 1);
+}
