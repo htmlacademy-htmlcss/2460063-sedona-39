@@ -1,0 +1,95 @@
+body {
+    outline: 5px solid rgb(181, 79, 91);
+    outline-offset: -5px;
+  }
+
+  .main-header{
+    outline: 5px solid rgb(127, 79, 181);
+    outline-offset: -5px;
+  }
+
+  .logo-sedona{
+    outline: 3px solid rgb(79, 149, 181);
+    outline-offset: -3px;
+  }
+
+  .navigation{
+    outline: 5px solid rgb(79, 181, 121);
+    outline-offset: -5px;
+  }
+
+  .navigation-list{
+    outline: 5px solid rgb(156, 181, 79);
+    outline-offset: -5px;
+  }
+
+  .navigation-user{
+    outline: 5px solid rgb(156, 181, 79);
+    outline-offset: -5px;
+  }
+
+  .navigation-link{
+    outline: 5px solid rgb(79, 181, 176);
+    outline-offset: -5px;
+  }
+
+.navigation-link-user{
+    outline: 5px solid rgb(79, 181, 176);
+    outline-offset: -5px;
+  }
+
+.page-footer-container{
+    outline: 5px solid rgb(79, 181, 176);
+    outline-offset: -5px;
+  }
+
+  .footer-contacts{
+    outline: 5px solid rgb(79, 181, 176);
+    outline-offset: -5px;
+  }
+
+  .footer-social{
+    outline: 5px solid rgb(79, 181, 176);
+    outline-offset: -5px;
+  }
+
+  .recommendations-list{
+    outline: 5px solid rgb(79, 181, 176);
+    outline-offset: -5px;
+
+  }
+
+  .recommendations-item{
+    outline: 5px solid rgb(79, 181, 110);
+    outline-offset: -5px;
+
+  }
+.logo-htmlacademy{
+  outline: 5px solid rgb(79, 181, 110);
+  outline-offset: -5px;
+}
+
+.catalog-filter-infrastructure-spisok{
+  outline: 5px solid rgb(79, 156, 181);
+  outline-offset: -5px;
+}
+
+.catalog-filter-housing-spisok{
+  outline: 5px solid rgb(79, 156, 181);
+  outline-offset: -5px;
+}
+
+.block-filter-checkbox{
+  outline: 5px solid rgb(147, 79, 181);
+  outline-offset: -5px;
+}
+
+.hotel-filter{
+  outline: 5px solid rgb(147, 79, 181);
+  outline-offset: -5px;
+}
+
+.block-price{
+  outline: 5px solid rgb(147, 79, 181);
+  outline-offset: -5px;
+}

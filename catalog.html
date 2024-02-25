@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Седона</title>
     <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/outline.css" rel="stylesheet">
   </head>
 
   <body>
@@ -29,7 +30,7 @@
           </li>
           <li>
             <a class="navigation-link-user" href="#"><span class="visually-hidden">Избранное</span><output
-                class="visually-hidden"><sup>12</sup></output>
+                class="visually-hidden"><sup class="number-of-likes">12</sup></output>
             </a>
           </li>
           <li>
@@ -38,10 +39,11 @@
         </ul>
       </nav>
     </header>
-    <main class="main-inner">
+    <main class="main-container main-inner">
       <div class="hotel-filter">
       <header class="inner-header">
         <h1 class="inner-header-title">Гостиницы Седоны</h1>
+        <div class="block-breadcrumbs">
         <ul class="breadcrumbs">
           <li class="breadcrumbs-item">
             <a class="link-home" href="index.html"><span class="visually-hidden">На главную</span>
@@ -51,9 +53,12 @@
             <a class="hotels" href="#">Гостиницы</a>
           </li>
         </ul>
+      </div>
       </header>
       <section class="catalog-hotels">
-        <h2 class="visually-hidden">Фильтр по гостиницам</h2>
+        <div class="block-filter">
+        <h2 class="visually-hidden" hidden>Фильтр по гостиницам</h2>
+        <div class="block-infrastructure">
         <form class="catalog-filter" action="https://echo.htmlacademy.ru" method="get">
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Инфраструктура:</legend>
@@ -77,7 +82,9 @@
                 </label>
               </li>
             </ul>
+          </div>
           </fieldset>
+          <div class="block-housing">
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Тип жилья:</legend>
             <ul class="catalog-filter-spisok">
@@ -100,8 +107,10 @@
                 </label>
               </li>
             </ul>
+          </div>
 
           </fieldset>
+          <div class="block-price">
           <fieldset class="catalog-filter-price">
             <legend class="price-text">Стоимость,<span>₽:</span></legend>
             <label>от<input type="text" value="0"></label>
@@ -110,11 +119,16 @@
 
           <input type="range" min="0" max="9000" value="0" id="slider-1" oninput="slideOne()">
           <input type="range" min="0" max="9000" value="7000" id="slider-2" oninput="slideTwo()">
+          </div>
 
+          <div class="block-button-filter">
           <button class="button" type="submit">Применить</button>
           <button class="button" type="reset">Сбросить</button>
+          </div>
+        </div>
         </div>
         </form>
+      </div>
         <div class="sorting">
           <p class="result">Найдено гостиниц: 38</p>
           <select class="select-control" aria-label="Сортировка">
@@ -130,6 +144,7 @@
             <span class="visually-hidden">Показать списком</span>
           </a>
         </div>
+        <div class="block-catalog">
         <ul class="product-list">
           <li class="product-list-item">
             <a class="product-list-link" href="#">
@@ -208,6 +223,8 @@
             </div>
           </li>
         </ul>
+      </div>
+      <div class="block-pagination">
         <ul class="pagination">
           <li class="pagination-item">
             <a class="pagination-link-current" href="#">1</a>
@@ -228,13 +245,17 @@
             <a class="pagination-link" href="#">10</a>
           </li>
         </ul>
+        </div>
       </section>
+
+
     </main>
     <footer class="footer-catalog">
+
       <section class="subscription-catalog">
         <h2 class="visually-hidden">Рассылка информации</h2>
-        <p class="subscription-text-catalog-1">Подпишитесь на рассылку</p>
-        <p class="subscription-text-catalog-2">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <p class="subscription-text-catalog-newsletter">Подпишитесь на рассылку</p>
+        <p class="subscription-text-catalog-helpful-information">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
           <p class="subcription-form-e-mail">
             <label for="subscription-e-mail">
@@ -243,7 +264,9 @@
           <button class="button-subscribe" type="submit">Подписаться</button>
         </form>
       </section>
+      <div class="page-footer-container">
       <section class="footer-social">
+
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="footer-social-list">
           <li class="footer-social-item">
@@ -273,6 +296,7 @@
           <span class="visually-hidden">Логотип HTML-Academy</span>
         </a>
       </section>
+      </div>
     </footer>
   </body>
 
