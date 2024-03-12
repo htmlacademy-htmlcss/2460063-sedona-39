@@ -93,3 +93,8 @@ body {
   outline: 5px solid rgb(147, 79, 181);
   outline-offset: -5px;
 }
+
+.button-type-of-cards{
+  outline: 5px solid rgb(147, 79, 181);
+  outline-offset: -5px;
+}
