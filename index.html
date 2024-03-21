@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="main-header">
+      <header class="main-header" data-test="header">
         <nav class="navigation">
           <div class="logo">
             <a class="logo-link" href="index.html">
@@ -56,21 +56,21 @@
           </ul>
         </nav>
       </header>
-      <main class="main-container main-index">
+      <main class="main-container main-index" data-test="main">
         <div class="main-page">
-          <section class="welcome-sedona">
+          <section class="welcome-sedona" data-test="hero">
             <h1 class="visually-hidden">Седона</h1>
             <img class="welcome-sedona-background" src="images/svg/welcome-sedona.svg" width="458" height="352"
               alt="Добро пожаловать в Седону">
           </section>
-          <section class="welcome-sedona-text">
+          <section class="welcome-sedona-text" data-test="advantages">
             <h2 class="visually-hidden">Описание Седоны</h2>
             <p class="welcome-sedona-text-location">
               Седона — небольшой городок в Аризоне, заслуживающий большего!
             </p>
             <p class="welcome-sedona-text-advantages">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
           </section>
-          <section class="advantages-sedona">
+          <section class="advantages-sedona" data-test="advantages">
             <h2 class="visually-hidden">Преимущества Седоны</h2>
             <div class="index-columns">
               <ul class="advantages-list">
@@ -105,7 +105,7 @@
               </ul>
             </div>
           </section>
-          <section class="recommendations">
+          <section class="recommendations" data-test="service">
             <h2 class="visually-hidden">Реккомендации</h2>
             <div class="recommendations-text">
               <p class="recommendations-text-comfort">Приезжайте в Седону отдохнуть<br>в комфорте и уюте!</p>
@@ -128,7 +128,7 @@
               </li>
             </ul>
           </section>
-          <section class="hotel-search">
+          <section class="hotel-search" data-test="search">
             <h2 class="visually-hidden">Поиск гостиницы</h2>
             <p class="hotel-search-text-interested">Заинтересовались?</p>
             <p class="hotel-search-text-search-terms">
@@ -140,11 +140,11 @@
         </div>
       </main>
       <footer class="footer-main">
-        <section class="subscription">
+        <section class="subscription" data-test="subscribe">
           <h2 class="visually-hidden">Рассылка информации</h2>
           <p class="subscription-text-newsletter">Подпишитесь на рассылку</p>
           <p class="subscription-text-helpful-information">
-            Только полезная информация и никакого спама,<br> честное бойскаутское!
+            Только полезная информация и никакого спама, честное бойскаутское!
           </p>
           <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
             <label for="subscription-e-mail">
@@ -154,8 +154,8 @@
             <button class="button-subscribe button-blue" type="submit">Подписаться</button>
           </form>
         </section>
-        <div class="page-footer-container">
-          <section class="footer-social">
+        <div class="page-footer-container"  data-test="footer">
+          <section class="footer-social"  data-test="footer">
             <h2 class="visually-hidden">Социальные сети</h2>
             <ul class="footer-social-list">
               <li class="footer-social-item">
@@ -196,7 +196,7 @@
         </div>
       </footer>
     </div>
-    <div class="modal-container modal-container-close">
+    <div class="modal-container modal-container-close" data-test="modal">
       <div class="modal modal-search">
         <button class="modal-close-button">
           <span class="visually-hidden">Закрыть</span>
@@ -204,16 +204,20 @@
         <section class="modal-content">
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
           <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
-            <div class="field-group">
-              <label class="text-form-search" for="search-data-arrival">Дата Заезда:</label>
-              <input class="search-form-field form-date" type="text" id="search-data-arrival" name="data-arrival" value="27 апреля 2020" placeholder="Дата Заезда" required>
+            <div class="block-data arrival">
+              <div class="field-group">
+                <label class="text-form-search" for="search-data-arrival">Дата Заезда:</label>
+                <input class="search-form-field form-date" type="text" id="search-data-arrival" name="data-arrival" value="27 апреля 2020" placeholder="Дата Заезда" required>
+              </div>
+              <span class="error-text-form-search">Мы не можем отправить вас в прошлое.</span>
             </div>
-            <span class="error-text-form-search">Мы не можем отправить вас в прошлое.</span>
-            <div class="field-group">
-              <label class="text-form-search" for="search-data-of-departure">Дата Выезда:</label>
-              <input class="search-form-field form-date" type="text" id="search-data-of-departure"  name="data-of-departure" value="1 сентября 2023" placeholder="Дата Выезда" required>
+            <div class="block-data departure">
+              <div class="field-group">
+                <label class="text-form-search" for="search-data-of-departure">Дата Выезда:</label>
+                <input class="search-form-field form-date" type="text" id="search-data-of-departure"  name="data-of-departure" value="1 сентября 2023" placeholder="Дата Выезда" required>
+              </div>
+              <span class="info-text-form-search">На эти даты есть свободные номера. Пока есть.</span>
             </div>
-            <span class="info-text-form-search">На эти даты есть свободные номера. Пока есть.</span>
             <div class="number-of-people">
               <div class="number-of-adults">
                 <label class="text-form-search" for="of-adults">Взрослые:
@@ -243,7 +247,7 @@
                 </div>
               </div>
             </div>
-            <button class="modal-search-button button-blue">
+            <button class="modal-search-button button-blue" type="submit">
               <span class="modal-search-button-text">Найти</span>
             </button>
           </form>
