@@ -92,20 +92,16 @@ body {
   cursor: pointer;
 }
 
-.button-brown:hover{
+.button-brown:hover,
+.button-brown:focus{
   background-color: var(--button-nover-brown);
   color: var(--main-color);
+  outline-color: var(--button-nover-brown);
 }
 
 .button-brown:active{
   background-color: var(--a-button-color);
   color:var(--grey-underline-text) ;
-}
-
-.button-brown:focus{
-  background-color: var(--button-nover-brown);
-  color: var(--main-color);
-  outline: 1px solid var(--button-nover-brown);
 }
 
 .button-brown:disabled{
@@ -119,19 +115,17 @@ body {
   cursor: pointer;
 }
 
-.button-blue:hover{
+.button-blue:hover,
+.button-blue:focus{
   color: var(--main-color);
   background-color: var(--icon-social-hover);
+  outline: none;
+  outline-color: red;
 }
 
 .button-blue:active{
   color: var(--main-color);
   background-color: var(--advantages-item-1);
-}
-
-.button-blue:focus{
-  outline: 2px solid var(--icon-social-hover);
-  background-color: var(--icon-social-hover);
 }
 
 .button-blue:disabled{
@@ -182,7 +176,8 @@ body {
   text-underline-position: under;
 }
 
-.navigation-link:hover {
+.navigation-link:hover,
+.navigation-link:focus{
   text-decoration: underline;
   text-decoration-color: var(--a-button-color);
   text-underline-offset: 19px;
@@ -197,12 +192,6 @@ body {
   text-underline-offset: 19px;
   text-decoration-thickness: 2px;
   text-underline-position: under;
-  color: var(--select-disabled);
-}
-
-.navigation-link:focus{
-  outline: 2px solid var(--icon-social-hover);
-  border-radius: 4px;
   color: var(--select-disabled);
 }
 
@@ -349,9 +338,9 @@ body {
 }
 
 .welcome-sedona-text-advantages{
+  padding: 0;
   padding-left: 40px;
   padding-right: 40px;
-  padding: 0;
   margin-top: 0;
   margin-bottom: 90px;
   text-align: center;
@@ -446,6 +435,7 @@ body {
   padding: 113px 85px;
   box-sizing: border-box;
   background-color:var(--advantages-item-3);
+  color: var(--text-color-2);
 }
 
 .number-2,
@@ -454,6 +444,7 @@ body {
   padding: 113px 85px;
   box-sizing: border-box;
   background-color:var(--advantages-item-2);
+  color: var(--text-color-2);
 }
 
 .recommendations-text{
@@ -681,16 +672,13 @@ body {
   fill: var(--icon-social-icon);
 }
 
-.footer-social-link:hover .icon-social{
+.footer-social-link:hover .icon-social,
+.footer-social-link:focus .icon-social{
   fill: var(--icon-social-hover);
 }
 
 .footer-social-link:active .icon-social{
   fill: var(--icon-social-active);
-}
-
-.footer-social-link:focus .icon-social{
-  fill: var(--icon-social-hover);
 }
 
 .footer-contacts{
@@ -1155,12 +1143,14 @@ color: var(--label-text);
 
 .sorting{
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 40px;
 }
 
 .block-type-of-cards{
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin-left: 70px;
 }
@@ -1168,6 +1158,8 @@ color: var(--label-text);
 .result{
   display: block;
   margin: 0;
+  width: 488px;
+  padding-right: 50px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -1176,7 +1168,6 @@ color: var(--label-text);
 }
 
 .select-control{
-  margin-left: auto;
   width: 292px;
   height: 49px;
   padding-left: 20px;
@@ -1261,6 +1252,15 @@ color: var(--label-text);
   line-height: 28px;
   font-weight: 700;
   color: var(--text-color);
+}
+
+.product-title-link:hover,
+.product-title-link:focus{
+  opacity: 60%;
+}
+
+.product-title-link:active{
+  opacity: 40%;
 }
 
 .product-list-price-text{
@@ -1460,17 +1460,15 @@ color: var(--label-text);
   border-radius: 4px;
 }
 
-.pagination-link:hover{
+.pagination-link:hover,
+.pagination-link:focus{
   background-color: var(--icon-social-hover);
+  outline-color: var(--icon-social-hover);
 }
 
 .pagination-link:active{
   background-color: var(--advantages-item-1);
   color: var(--grey-underline-text);
-}
-
-.pagination-link:focus{
-  background-color: var(--icon-social-hover);
 }
 
 .pagination-link.current{
