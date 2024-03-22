@@ -1240,6 +1240,11 @@ color: var(--label-text);
   display: block;
 }
 
+.product-img-link:hover,
+.product-img-link:focus{
+  opacity: 60%;
+}
+
 .product-title-link{
   grid-column: 1 / -1;
   grid-row: 3 / 4;
