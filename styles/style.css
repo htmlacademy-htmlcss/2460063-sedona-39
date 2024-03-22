@@ -49,10 +49,8 @@
 
 html{
   height: 100%;
-
 }
 
-/*Блок-body*/
 body {
   display: flex;
   flex-direction: column;
@@ -84,7 +82,6 @@ body {
   overflow: hidden;
 }
 
-/* Блок-header "главная страница"*/
 .main-header{
   background-color: var(--main-color);
 }
@@ -151,7 +148,6 @@ body {
   z-index: 1;
 }
 
-/*логотип доллжен быть сверху*/
 .logo-sedona{
   margin-bottom: -6px;
   display: block;
@@ -163,6 +159,10 @@ body {
 
 .logo-sedona:active{
   opacity: 50%;
+}
+
+.logo-link:focus{
+  opacity: 80%;
 }
 
 .navigation-list{
@@ -203,6 +203,7 @@ body {
 .navigation-link:focus{
   outline: 2px solid var(--icon-social-hover);
   border-radius: 4px;
+  color: var(--select-disabled);
 }
 
 .navigation-user{
@@ -224,12 +225,16 @@ body {
   fill: var(--text-color);
 }
 
-.navigation-icon:hover{
-  fill: var(--select-disabled)
+.navigation-item-user:hover{
+  opacity: 60%;
 }
 
-.navigation-icon:active{
-  fill: var(--text-color);
+.navigation-item-user:active{
+  opacity: 30%;
+}
+
+.navigation-link-user:focus{
+  opacity: 60%;
 }
 
 .navigation-link{
@@ -254,11 +259,6 @@ body {
   text-align: center;
   color: var(--text-color);
   text-decoration: none;
-}
-
-.navigation-link-user:focus{
-  outline: 2px solid var(--icon-social-hover);
-  border-radius: 4px;
 }
 
 .number-of-likes{
@@ -301,8 +301,6 @@ body {
   text-transform: uppercase;
   border-radius: 4px;
 }
-
-/*Блок-"Добро пожаловать в Седону"*/
 
 .main-index{
   background-color: var(--main-color);
@@ -361,7 +359,6 @@ body {
 
 }
 
-/*Блок-"Преимущества Седоны"*/
 .advantages-list{
   margin: 0;
   padding: 0;
@@ -426,6 +423,8 @@ body {
 
 .advantages-item-text {
   padding: 102px 85px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .number-1{
@@ -457,10 +456,10 @@ body {
   background-color:var(--advantages-item-2);
 }
 
-/*Блок-"Рекоммендации"*/
 .recommendations-text{
   display: flex;
   flex-direction: column;
+  padding: 0 20px;
   text-align: center;
 }
 
@@ -527,6 +526,7 @@ body {
   line-height: 28px;
   color: var(--text-color);
   text-transform: uppercase;
+  word-wrap: break-word;
 }
 
 .recommendations-list p{
@@ -540,7 +540,6 @@ body {
   background-color: var(--advantages-item-2);
 }
 
-/*Блок-"Поиск гостиницы"*/
 .hotel-search{
   display: flex;
   flex-direction: column;
@@ -580,8 +579,6 @@ body {
   border-radius: 4px;
 }
 
-
-/*Блок "Подписаться на рассылку"*/
 .subscription{
   background-image: url("../images/jpg/background_subscription.jpg");
   background-size: cover;
@@ -614,7 +611,7 @@ body {
 
 .input-e-mail{
   width: 452px;
-  height: 52px;
+  height: 100%;
   padding-left: 20px;
   padding-top: 14px;
   padding-bottom: 14px;
@@ -629,7 +626,7 @@ body {
 
 .button-subscribe{
   width: 232px;
-  padding: 0;
+  padding: 0 12px;
   font-family: inherit;
   font-size: 20px;
   line-height: 36px;
@@ -638,9 +635,8 @@ body {
   border: none;
   border-radius: 0 4px 4px 0;
   overflow: hidden;
+  word-wrap: break-word;
 }
-
-/*Блок "footer -"главная страница""*/
 
 .footer-main{
   background-color: var(--main-color);
@@ -693,6 +689,10 @@ body {
   fill: var(--icon-social-active);
 }
 
+.footer-social-link:focus .icon-social{
+  fill: var(--icon-social-hover);
+}
+
 .footer-contacts{
   width: 720px;
   padding-top: 5px;
@@ -715,6 +715,10 @@ body {
   color:var(--link-active);
 }
 
+.telephone:focus{
+  color:var(--a-button-color);
+}
+
 .logo-htmlacademy{
   display: block;
   padding-top: 8px;
@@ -733,9 +737,10 @@ body {
   fill:var(--link-active);
 }
 
-/*КАТАЛОГ*/
+.logo-htmlacademy-link:focus .logo-htmlacademy-icon{
+  fill:var(--a-button-color);
+}
 
-/*Блок-"Фильтр по гостиницам"*/
 .main-inner{
   background-color: var(--main-color);
 }
@@ -771,6 +776,10 @@ a:active .icon-home{
   fill:var(--main-color)
 }
 
+a:focus .icon-home{
+  fill:var(--breadcrumbs-hover)
+}
+
 .breadcrumbs-item.home::after{
   content: url("../images/svg/breadcrumbs.svg");
   position: absolute;
@@ -795,7 +804,7 @@ a:active .icon-home{
 }
 
 .breadcrumbs-item a:focus{
-  color:var(--main-color);
+  color:var(--breadcrumbs-hover);
 }
 
 .catalog-filter {
@@ -1119,8 +1128,13 @@ color: var(--label-text);
   box-sizing: border-box;
 }
 
+.range-input:hover{
+  background-color: var(--product-border);
+}
+
 .range-input:focus{
   outline: 3px solid var(--advantages-item-1);
+  background-color: var(--product-border);
 }
 
 .range-input::-webkit-outer-spin-button,
@@ -1196,7 +1210,6 @@ color: var(--label-text);
   color: var(--select-disabled);
 }
 
-/*Блок "Каталог продукции"*/
 .catalog-hotel{
   padding: 50px 70px 60px 70px;
  }
@@ -1454,6 +1467,10 @@ color: var(--label-text);
 .pagination-link:active{
   background-color: var(--advantages-item-1);
   color: var(--grey-underline-text);
+}
+
+.pagination-link:focus{
+  background-color: var(--icon-social-hover);
 }
 
 .pagination-link.current{
