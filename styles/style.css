@@ -35,6 +35,7 @@
   --icon-social-icon: rgba(131, 179, 211, 1);
   --text-color: rgba(0, 0, 0, 1);
   --select-disabled: rgba(0, 0, 0, 0.3);
+  --body-shadows:rgba(0, 0, 0, 0.2);
   --modal-shadows: rgba(0, 0, 0, 0.15) ;
   --toggle-active:rgba(0, 0, 0, 0.25);
   --toggle-focus:rgba(0, 0, 0, 0.4);
@@ -68,7 +69,7 @@ body {
 .wrapper{
   width: 1200px;
   margin: 0 auto;
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px 0 var(--body-shadows);
 }
 
 .visually-hidden {
@@ -615,6 +616,15 @@ body {
   border: none;
 }
 
+.input-e-mail:hover{
+  background-color: var(--product-border);
+}
+
+.input-e-mail:focus{
+  background-color: var(--product-border);
+  outline: 3px solid var(--icon-social-icon);
+}
+
 .button-subscribe{
   width: 232px;
   padding: 0 12px;
@@ -800,10 +810,6 @@ a:focus .icon-home{
   flex-direction: row;
 }
 
-.block-infrastructure{
-  margin-right: 70px;
-}
-
 .block-housing{
   margin-right: 140px;
 }
@@ -843,6 +849,11 @@ a:focus .icon-home{
 
 .infrastructure-input:focus + .infrastructure-mark{
   outline: 3px solid var(--icon-social-hover);
+}
+
+.infrastructure-input:disabled + .infrastructure-mark{
+  opacity: 30%;
+  cursor: auto;
 }
 
 
@@ -890,6 +901,10 @@ a:focus .icon-home{
   outline: 3px solid var(--icon-social-hover);
 }
 
+.housing-input:disabled + .housing-mark{
+  opacity: 30%;
+}
+
 .housing-input[type="radio"] + .housing-mark{
   border-radius: 50%;
 }
@@ -919,9 +934,17 @@ a:focus .icon-home{
   list-style-type: none;
 }
 
-.catalog-filter-group {
+.catalog-filter-group-infrastructure{
   padding: 0;
   margin: 0;
+  margin-right: 70px;
+  border: none;
+}
+
+.catalog-filter-group-housing{
+  padding: 0;
+  margin: 0;
+  margin-right: 140px;
   border: none;
 }
 
@@ -943,13 +966,6 @@ a:focus .icon-home{
 
 .block-price-filter{
   display: flex;
-}
-
-.block-price{
-  width: 288px;
-  margin: 0;
-  padding: 0;
-  margin-right: 70px;
 }
 
 .block-button-filter{
@@ -1016,11 +1032,6 @@ a:focus .icon-home{
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
-}
-
-.block-price{
-  display: flex;
-  flex-direction: column;
 }
 
 .price-text{
@@ -1099,6 +1110,8 @@ color: var(--label-text);
   padding: 0;
   border: none;
   margin: 0;
+  width: 288px;
+  margin-right: 70px;
 }
 
 .range-input{
@@ -1204,9 +1217,6 @@ color: var(--label-text);
 .catalog-hotel{
   padding: 50px 70px 60px 70px;
  }
-.block-catalog{
-  margin-bottom: 80px;
-}
 
 .product-list{
   display: grid;
@@ -1215,6 +1225,7 @@ color: var(--label-text);
   gap: 20px;
   margin: 0;
   padding: 0;
+  margin-bottom: 80px;
 }
 
 .product-list-item{
@@ -1327,19 +1338,18 @@ color: var(--label-text);
   box-sizing: border-box;
 }
 
-.button-type-of-cards{
-  outline: var(--button-background);
-}
-
-.button-type-of-cards:hover{
-  outline: var(--text-color);
+.block-type-of-cards a:hover{
+  border: none;
+  outline: 2px solid var(--text-color);
 }
 
 .button-type-of-cards:active{
-  outline: var(--text-color);
+  border: none;
+  outline: 2px solid var(--text-color);
 }
 
 .button-type-of-cards:focus{
+  border: none;
   outline: 2px solid var(--advantages-item-1);
   border-radius: 4px;
 }
@@ -1373,6 +1383,7 @@ color: var(--label-text);
   border-color: var(--advantages-item-1);
   border-radius: 4px;
   border: none;
+  cursor: pointer;
 }
 
 .current{
@@ -1403,20 +1414,21 @@ color: var(--label-text);
   grid-column: 1 / 2;
   grid-row: 6 / 7;
   align-self: center;
+  width: 140px;
+  height: 37px;
 }
 
-.raiting-stars-list{
-  display: flex;
-  gap: 6px;
-  padding: 0;
-  list-style: none;
+.stars-list.four-stars{
+  background-image: url("../images/svg/stars-4.svg");
+
 }
 
-.raiting-stars-item-active{
-  width: 18px;
-  height: 17px;
-  background-image: url("../images/svg/stars.svg");
-  background-repeat: no-repeat;
+.stars-list.three-stars{
+  background-image: url("../images/svg/stars-3.svg");
+}
+
+.stars-list.two-stars{
+  background-image: url("../images/svg/stars-2.svg");
 }
 
 .raiting-text{
@@ -1565,13 +1577,13 @@ color: var(--label-text);
   background-color: var(--background-close);
   border: none;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .modal-close-button::after{
   display: block;
   background-repeat: no-repeat;
   background-position: center;
-  cursor: pointer;
   content: url("../images/svg/close.svg");
 }
 

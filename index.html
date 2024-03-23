@@ -198,7 +198,7 @@
     </div>
     <div class="modal-container modal-container-close" data-test="modal">
       <div class="modal modal-search">
-        <button class="modal-close-button">
+        <button class="modal-close-button" type="button">
           <span class="visually-hidden">Закрыть</span>
         </button>
         <section class="modal-content">
@@ -223,9 +223,13 @@
                 <label class="text-form-search" for="of-adults">Взрослые:
                 </label>
                 <div class="number-of-people-button">
-                  <button class="input-button minus" type="button"></button>
+                  <button class="input-button minus" type="button">
+                    <span class="visually-hidden">Уменьшить количество</span>
+                  </button>
                   <input class="select-form-field adults" type="text" id="of-adults" name="adults" value="2">
-                  <button class="input-button plus" type="button"></button>
+                  <button class="input-button plus" type="button">
+                    <span class="visually-hidden">Увеличить количество</span>
+                  </button>
                 </div>
               </div>
               <div class="number-of-children">
@@ -241,9 +245,13 @@
                   </span>
                 </span>
                 <div class="number-of-people-button">
-                  <button class="input-button minus" type="button"></button>
+                  <button class="input-button minus" type="button">
+                    <span class="visually-hidden">Уменьшить количество</span>
+                  </button>
                   <input class="select-form-field children" type="text" id="of-children" name="data-arrival" value="2">
-                  <button class="input-button plus" type="button"></button>
+                  <button class="input-button plus" type="button">
+                    <span class="visually-hidden">Увеличить количество</span>
+                  </button>
                 </div>
               </div>
             </div>
